@@ -1,0 +1,9 @@
+<p>Nombre: <%= @person.firstname %> <%= @person.lastname %></p>
+
+<p>Conyuge:<% @person.matched_people.each do |x| %>
+	<%= "#{x.firstname} #{x.lastname}" %>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
